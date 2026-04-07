@@ -3,20 +3,20 @@
   "created_at": "2026-04-07T08:41:16.833078+00:00",
   "github_repo": "ykzhujiang/war-god-returns-ep01",
   "config": {
-    "theme": "战神归来：退役军人林战五年后回归都市，重逢妻女、守护家庭。EP01：雨夜归来，温情重聚与初次展露实力。",
+    "theme": "退役战神陈锋做保安，隐藏身份被嘲笑吃软饭，妻子公司遇危机时暴露实力打脸众人。军事化保安用语反差搞笑。",
     "genre": "action",
     "style": "realistic",
-    "duration": 120,
-    "characters": 5,
+    "duration": 180,
+    "characters": 4,
     "setting": "中国·当代·都市",
     "appearance": "east-asian",
-    "art_style": "cinematic dark thriller, rain-soaked urban, cold blue-grey tones, dramatic lighting"
+    "art_style": "warm cinematic realistic, golden hour lighting, dramatic shadows, urban China setting"
   },
-  "status": "step1b_done",
+  "status": "step1b_in_progress",
   "steps": {
     "step1b": {
-      "status": "done",
-      "started_at": "2026-04-07T08:49:29.952655+00:00",
+      "status": "in_progress",
+      "started_at": "2026-04-07T10:10:21.969461+00:00",
       "completed_at": "2026-04-07T08:50:43.870801+00:00",
       "output": "storyboard.md",
       "segment_count": 8
