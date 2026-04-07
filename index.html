@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>代码重启 — EP01 剧本</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: #0a0a0f;
+    color: #e0e0e0;
+    line-height: 1.7;
+    font-size: 17px;
+}
+.hero {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    padding: 60px 20px 40px;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 32px;
+    color: #f5c542;
+    margin-bottom: 8px;
+    text-shadow: 0 2px 10px rgba(245,197,66,0.3);
+}
+.hero .subtitle {
+    color: #8899aa;
+    font-size: 15px;
+}
+.hero .setting-tag {
+    display: inline-block;
+    background: rgba(245,197,66,0.15);
+    color: #f5c542;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    margin-top: 12px;
+}
+.section {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px 16px;
+}
+.section-title {
+    font-size: 20px;
+    color: #f5c542;
+    margin-bottom: 16px;
+    padding-left: 12px;
+    border-left: 3px solid #f5c542;
+}
+.char-card, .scene-card {
+    background: #151520;
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+    border: 1px solid #222;
+}
+.char-name, .scene-name {
+    display: block;
+    font-weight: 700;
+    color: #64b5f6;
+    margin-bottom: 4px;
+    font-size: 16px;
+}
+.scene-name { color: #81c784; }
+.char-desc, .scene-desc {
+    color: #999;
+    font-size: 14px;
+    line-height: 1.6;
+}
+.segment {
+    background: #12121c;
+    border-radius: 16px;
+    padding: 20px 16px;
+    margin-bottom: 16px;
+    border: 1px solid #1e1e30;
+    animation: fadeInUp 0.5s ease both;
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.seg-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+.seg-num {
+    font-size: 18px;
+    font-weight: 800;
+    color: #f5c542;
+}
+.seg-duration {
+    background: rgba(245,197,66,0.12);
+    color: #f5c542;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+}
+.seg-meta {
+    margin-bottom: 12px;
+}
+.meta-item {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 3px;
+}
+.meta-label { margin-right: 4px; }
+.phys-state {
+    background: rgba(100,181,246,0.06);
+    border-radius: 8px;
+    padding: 10px 12px;
+    margin-bottom: 14px;
+    border-left: 3px solid #64b5f6;
+}
+.phys-title {
+    font-size: 12px;
+    color: #64b5f6;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+.phys-line {
+    font-size: 13px;
+    color: #888;
+    line-height: 1.5;
+}
+.parts { }
+.part {
+    padding: 8px 0;
+    border-bottom: 1px solid #1a1a28;
+    font-size: 16px;
+    line-height: 1.8;
+}
+.part:last-child { border-bottom: none; }
+.part-num {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    background: #1e1e30;
+    color: #f5c542;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 700;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+.char-tag {
+    color: #64b5f6;
+    font-weight: 600;
+}
+.dialogue {
+    color: #fff;
+    font-weight: 500;
+}
+.inner {
+    color: #ce93d8;
+    font-style: italic;
+}
+.footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: #444;
+    font-size: 13px;
+}
+</style>
+</head>
+<body>
+<div class="hero">
+    <h1>代码重启</h1>
+    <div class="subtitle">Code Reboot — EP01 · V6 Seedance 剧本</div>
+    <div class="setting-tag">📍 中国·当代·都市</div>
+</div>
+
+<div class="section">
+    <div class="section-title">🎭 角色</div>
+    <div class="char-card"><span class="char-name">林战</span><span class="char-desc">30岁男性，身高185cm壮硕体型，古铜色皮肤，方脸下颌线清晰，深邃双眼高鼻梁，黑色短寸头，身穿深绿色长款风衣内搭黑色战术衬衫和黑色军靴。</span></div>
+<div class="char-card"><span class="char-name">苏婉</span><span class="char-desc">28岁女性，身高165cm纤细体型，白皙皮肤，瓜子脸眉目温柔但充满疲惫，黑色齐肩发发丝微乱，身穿米色针织开衫内搭洗旧的白色连衣裙。</span></div>
+<div class="char-card"><span class="char-name">林小溪</span><span class="char-desc">5岁女性，身高110cm娇小体型，白皙皮肤，圆脸大眼睛眼眶泛红，扎着两个凌乱的双马尾，身穿有些破旧的粉色外套和蓝色牛仔背带裤。</span></div>
+<div class="char-card"><span class="char-name">光头强</span><span class="char-desc">35岁男性，身高180cm微胖壮硕体型，肤色粗糙暗沉，圆脸横肉满面眼神凶狠，光头无发，身穿紧身黑色皮夹克脖子上戴着粗金项链。</span></div>
+<div class="char-card"><span class="char-name">黄毛混混</span><span class="char-desc">22岁男性，身高175cm瘦削体型，肤色苍白，尖下巴细长眼贼眉鼠眼，染着一头杂乱的黄发，身穿破洞牛仔马甲和黑色印花T恤。</span></div>
+
+</div>
+
+<div class="section">
+    <div class="section-title">🏙️ 场景</div>
+    <div class="scene-card"><span class="scene-name">破旧老洋房外-雨夜</span><span class="scene-desc">昏暗的城市老旧胡同，下着瓢泼大雨，地面青石板积水严重反射着路灯光，墙壁斑驳爬满青苔，一盏昏黄的路灯在风雨中摇晃，气氛压抑阴冷。</span></div>
+<div class="scene-card"><span class="scene-name">破旧老洋房内-夜</span><span class="scene-desc">光线昏暗的老旧客厅，墙皮大面积脱落，头顶只有一盏发出微弱暖光的白炽灯，屋中央摆着一张简陋破旧的木桌和几把残缺的木椅，环境拥挤且充满紧张压迫感。</span></div>
+
+</div>
+
+<div class="section">
+    <div class="section-title">🎬 分镜</div>
+    
+        <div class="segment" style="animation-delay: 0.0s">
+            <div class="seg-header">
+                <span class="seg-num">Segment 1</span>
+                <span class="seg-duration">≤15s</span>
+            </div>
+            <div class="seg-meta">
+                <div class="meta-item"><span class="meta-label">📍</span> [破旧老洋房外-雨夜]</div>
+                <div class="meta-item"><span class="meta-label">🎭</span> [林战]</div>
+                <div class="meta-item"><span class="meta-label">🎥</span> 全景，平视角度，跟随运镜，正常速度
+
+## Segment 2 | ≤15s
+**Location**: [破旧老洋房内-夜]
+**Cast**: [苏婉], [林小溪], [光头强]
+**图片引用**: 图片1=[破旧老洋房内-夜] 图片2=[苏婉] 图片3=[林小溪] 图片4=[光头强]
+
+**Physical State:**
+- **[光头强]**: 画面左侧，站姿，右手伸出指着前方，面向右侧的母女
+- **[苏婉]**: 画面右侧，跪坐在地，双手抱着女儿，面向左侧的大汉
+- **[林小溪]**: 画面右侧，缩在妈妈怀里，双手抓着衣服，面向左侧的大汉
+
+[Part 1] [光头强]身体前倾，右手食指凶狠指向前方女人，嘴角泛起冷笑。
+[Part 2] [光头强]恶狠狠地说：&quot;今天再不交房产证，你们母女就去睡大街！&quot;
+[Part 3] [苏婉]双臂紧紧护住怀里的女儿，咬紧牙关，抬头愤怒地瞪着前方。
+[Part 4] [苏婉]大声说：&quot;这是林战留给我们的家，我死也不会给你们！&quot;
+
+运镜：中景，过肩镜头，固定机位，正常速度
+
+## Segment 3 | ≤15s
+**Location**: [破旧老洋房内-夜]
+**Cast**: [苏婉], [林小溪], [黄毛混混]
+**图片引用**: 图片1=[破旧老洋房内-夜] 图片2=[苏婉] 图片3=[林小溪] 图片4=[黄毛混混]
+
+**Physical State:**
+- **[黄毛混混]**: 画面左侧，半蹲姿态，右手前伸，面向右侧的母女
+- **[苏婉]**: 画面右侧，跪坐姿态，双手护着女儿，面向左侧的混混
+- **[林小溪]**: 画面右侧，缩在怀里，双手抱头，面向左侧的混混
+
+[Part 1] [黄毛混混]猛然向前窜出，伸出右手，一把狠狠抓向小女孩的胳膊。
+[Part 2] [黄毛混混]狞笑着说：&quot;大哥别废话，先带走这小丫头卖了抵债！&quot;
+[Part 3] [林小溪]吓得浑身发抖，紧紧抱住妈妈脖子，眼泪迅速夺眶而出。
+[Part 4] [林小溪]大哭着说：&quot;妈妈我怕，爸爸什么时候回来救我们？&quot;
+
+运镜：近景，稍微俯视角度，轻微手持晃动，正常速度
+
+## Segment 4 | ≤15s
+**Location**: [破旧老洋房内-夜]
+**Cast**: [林战], [黄毛混混]
+**图片引用**: 图片1=[破旧老洋房内-夜] 图片2=[林战] 图片3=[黄毛混混]
+
+**Physical State:**
+- **[林战]**: 画面左侧，挺拔站立，双拳紧握，面向右侧的混混
+- **[黄毛混混]**: 画面右侧，转身半蹲，双手悬在半空，面向左侧的大门
+
+[Part 1] 伴随巨大撞击声，木门飞开，[林战]带满身雨水大步跨入门槛。
+[Part 2] [林战]双眼微眯，瞳孔闪过极度冰冷杀意，死死锁定右侧的混混。
+[Part 3] [林战]声音低沉地说：&quot;谁敢动我女儿，今天就得把命留在这里！&quot;
+[Part 4] [黄毛混混]惊恐转头看向左侧，双眼瞬间瞪大，下巴不自觉张开。
+
+运镜：全景，低角度仰拍，缓慢推镜头，正常速度
+
+## Segment 5 | ≤15s
+**Location**: [破旧老洋房内-夜]
+**Cast**: [林战], [黄毛混混]
+**图片引用**: 图片1=[破旧老洋房内-夜] 图片2=[林战] 图片3=[黄毛混混]
+
+**Physical State:**
+- **[林战]**: 画面左侧，战斗姿态，右臂向前挥出，面向右侧的混混
+- **[黄毛混混]**: 画面右侧，身体后仰，双手乱抓，面向左侧的男人
+
+[Part 1] [林战]左脚蹬地前冲，右拳带凌厉风声，直击右侧混混面颊。
+[Part 2] [黄毛混混]发出惨叫，面部扭曲，身体失去平衡向右侧后方倒飞。
+[Part 3] [黄毛混混]痛苦哀嚎说：&quot;啊！我的下巴断了，大哥快救命！&quot;
+[Part 4] [林战]迅速收回右拳，重心下压，转头冷冷看向右前方的大汉。
+
+运镜：中景，平视角度，跟随动作快速横摇，正常速度
+
+## Segment 6 | ≤15s
+**Location**: [破旧老洋房内-夜]
+**Cast**: [林战], [光头强]
+**图片引用**: 图片1=[破旧老洋房内-夜] 图片2=[林战] 图片3=[光头强]
+
+**Physical State:**
+- **[林战]**: 画面左侧，防御姿态，左臂抬起，面向右侧的大汉
+- **[光头强]**: 画面右侧，前倾攻击，右拳挥出，面向左侧的男人
+
+[Part 1] [光头强]暴怒挥舞粗壮右臂，紧握拳头狠狠砸向左侧男人的头部。
+[Part 2] [光头强]怒吼说：&quot;哪里来的野小子，敢动我的人，你简直找死！&quot;
+[Part 3] [林战]头部微偏躲过，左手化掌瞬间扣住大汉右手腕向左侧拉扯。
+[Part 4] [林战]右膝借力上顶，重击大汉腹部，迫使其痛苦捂肚子弯下腰。
+
+运镜：中景，平视角度，固定机位，正常速度
+
+## Segment 7 | ≤15s
+**Location**: [破旧老洋房内-夜]
+**Cast**: [林战], [苏婉]
+**图片引用**: 图片1=[破旧老洋房内-夜] 图片2=[林战] 图片3=[苏婉]
+
+**Physical State:**
+- **[林战]**: 画面左侧，站姿，双手自然下垂，面向右侧的妻子
+- **[苏婉]**: 画面右侧，跪坐姿态，右手捂嘴，面向左侧的丈夫
+
+[Part 1] [林战]缓缓站直身体，拍去风衣水渍，紧绷的面部线条瞬间柔和。
+[Part 2] [林战]内心充满自责，低声说：&quot;对不起，这些年让你们受委屈了。&quot;
+[Part 3] [苏婉]难以置信地瞪大双眼，右手颤抖捂住嘴唇，泪水夺眶而出。
+[Part 4] [苏婉]声音发颤地说：&quot;林战...真的是你？你终于活着回来了...&quot;
+
+运镜：近景，平视角度，缓慢推镜头，正常速度
+
+## Segment 8 | ≤15s
+**Location**: [破旧老洋房内-夜]
+**Cast**: [林战], [林小溪]
+**图片引用**: 图片1=[破旧老洋房内-夜] 图片2=[林战] 图片3=[林小溪]
+
+**Physical State:**
+- **[林战]**: 画面左侧，单膝跪地，双臂张开，面向右侧的女儿
+- **[林小溪]**: 画面右侧，站姿前倾，双手前伸，面向左侧的父亲
+
+[Part 1] [林战]快速单膝跪地，双臂向两侧大大张开，嘴角扬起温暖笑容。
+[Part 2] [林战]温柔地说：&quot;小小，爸爸回来了，以后再也没人欺负你们。&quot;
+[Part 3] [林小溪]迈开小腿向左侧奔跑扑进男人怀里，双手紧抱他的脖颈。
+[Part 4] [林小溪]大哭着喊道：&quot;爸爸！真的是爸爸，小小每天都在想你！&quot;
+
+运镜：中景，平视角度，固定机位，正常速度</div>
+            </div>
+            <div class="phys-state">
+                <div class="phys-title">Physical State</div>
+                <div class="phys-line">**[林战]**: 画面左侧，站姿，双手插在风衣口袋里，面向右侧木门</div>
+            </div>
+            <div class="parts">
+                <div class="part"><span class="part-num">P1</span> <span class="char-tag">林战</span>在雨中大步走，黑军靴踩起水花，眉头紧锁看向前方木门。</div>
+<div class="part"><span class="part-num">P2</span> <span class="char-tag">林战</span><span class="inner">内心独白</span>，低声说：&quot;五年了，婉儿和小小，我终于回来了。&quot;</div>
+<div class="part"><span class="part-num">P3</span> <span class="char-tag">林战</span>伸出右手，指关节发力，用力推开面前斑驳沉重的旧木门。</div>
+
+            </div>
+        </div>
+</div>
+
+<div class="footer">
+    Trinity V6 · Seedance 2.0 Storyboard · EXP-994
+</div>
+</body>
+</html>
