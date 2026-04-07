@@ -1,0 +1,29 @@
+{
+  "project": "war-god-returns-ep01",
+  "created_at": "2026-04-07T08:41:16.833078+00:00",
+  "github_repo": "ykzhujiang/war-god-returns-ep01",
+  "config": {
+    "theme": "战神归来：五年前被陷害退役的最强战士林战，回到都市保护家人、碾碎仇敌。EP01：雨夜归来，初次亮相。",
+    "genre": "action",
+    "style": "realistic",
+    "duration": 120,
+    "characters": 5,
+    "setting": "中国·当代·都市",
+    "appearance": "east-asian"
+  },
+  "status": "not_started",
+  "steps": {
+    "step1b": {
+      "status": "not_started"
+    },
+    "step3": {
+      "status": "not_started"
+    },
+    "step4": {
+      "status": "not_started"
+    },
+    "step6": {
+      "status": "not_started"
+    }
+  }
+}
